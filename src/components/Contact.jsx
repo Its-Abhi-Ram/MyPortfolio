@@ -57,16 +57,16 @@ const Contact = () => {
             </h5>
           </div>
           <div className="social-icons">
-            <a href="#" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn">
               <i className="bi bi-linkedin"></i>
             </a>
-            <a href="#" aria-label="GitHub">
+            <a href="https://www.github.com/" aria-label="GitHub">
               <i className="bi bi-github"></i>
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/"  aria-label="Instagram">
               <i className="bi bi-instagram"></i>
             </a>
-            <a href="#" aria-label="Phone">
+            <a href="tel:+1234567890" aria-label="Phone">
               <i className="bi bi-phone"></i>
             </a>
           </div>
