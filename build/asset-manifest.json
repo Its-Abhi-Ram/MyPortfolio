@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/MyPortfolio/static/css/main.bac1e3b3.css",
+    "main.js": "/MyPortfolio/static/js/main.2e8fa6f3.js",
+    "static/media/iot-crs-logo.png": "/MyPortfolio/static/media/iot-crs-logo.0ac27266f1c29d0a3d45.png",
+    "static/media/emial-spam-logo.png": "/MyPortfolio/static/media/emial-spam-logo.bddeec5e674cea60cfbc.png",
+    "static/media/bank-logo.png": "/MyPortfolio/static/media/bank-logo.a163152d80f03debc4de.png",
+    "static/media/pentagon-logo.png": "/MyPortfolio/static/media/pentagon-logo.fc8d61ffb5dd7bf8eeab.png",
+    "static/media/bootstrap-icons.woff?": "/MyPortfolio/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/mit-logo.png": "/MyPortfolio/static/media/mit-logo.828ff0901789713b164d.png",
+    "static/media/Resume.pdf": "/MyPortfolio/static/media/Resume.5aaa755696088a48fb2a.pdf",
+    "static/media/bootstrap-icons.woff2?": "/MyPortfolio/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/python.png": "/MyPortfolio/static/media/python.6a5cbc319ab3ddf8ef92.png",
+    "static/media/progton-logo.png": "/MyPortfolio/static/media/progton-logo.e4d669510c900a8a951b.png",
+    "static/media/mysql.png": "/MyPortfolio/static/media/mysql.4610cbabbff468ff8ae3.png",
+    "static/media/logo.png": "/MyPortfolio/static/media/logo.90931e943ead8b3c6597.png",
+    "static/media/Profile2.jpg": "/MyPortfolio/static/media/Profile2.1b77ded77ed241bcad65.jpg",
+    "static/media/profile2.jpg": "/MyPortfolio/static/media/profile2.1b77ded77ed241bcad65.jpg",
+    "static/media/rooman-logo.jpeg": "/MyPortfolio/static/media/rooman-logo.fa9c7f341db132b4a944.jpeg",
+    "static/media/django.png": "/MyPortfolio/static/media/django.559d0c6161a6fb950f02.png",
+    "static/media/java-script.png": "/MyPortfolio/static/media/java-script.78206ba65e01c7d57080.png",
+    "static/media/html-5.png": "/MyPortfolio/static/media/html-5.cfb2ba4a6b1c3de295bc.png",
+    "static/media/css-3.png": "/MyPortfolio/static/media/css-3.4a6549b8c2b4cda8bb88.png",
+    "index.html": "/MyPortfolio/index.html",
+    "main.bac1e3b3.css.map": "/MyPortfolio/static/css/main.bac1e3b3.css.map",
+    "main.2e8fa6f3.js.map": "/MyPortfolio/static/js/main.2e8fa6f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bac1e3b3.css",
+    "static/js/main.2e8fa6f3.js"
+  ]
+}
