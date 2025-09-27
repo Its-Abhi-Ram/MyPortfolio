@@ -1,13 +1,14 @@
 {
   "name": "myportfolio",
+  "homepage": "https://its-abhi-ram.github.io/myportfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "start": "react-scripts start",
+    "build": "react-scripts build", 
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap-icons": "^1.13.1",
