@@ -664,7 +664,7 @@ footer span {
   .about-box, .contact-box { padding: 0.3rem; }
   .intern-img, .project-img { height: 8rem; }
   .buttons button, .btn a { padding: 0.5rem 0.6rem; font-size: 1rem; }
-  .intro-social-icons a, .social-icons a { font-size: 1.4rem; margin-right: 0.6rem; }
+  .intro-social-icons a, .social-icons a { font-size: 1.4rem; margin-right: 0.4rem; }
   section h1 { font-size: 1.5rem; }
   section h1::after { width: 4rem; height:0.15rem; }
   footer { padding: 0.5rem; font-size: 0.8rem; border-radius: 0 0 0.3rem 0.3rem; }
