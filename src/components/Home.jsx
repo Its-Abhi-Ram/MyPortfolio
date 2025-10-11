@@ -56,7 +56,7 @@ function Home() {
           <a href="https://www.linkedin.com"><i className="bi bi-linkedin"></i></a>
           <a href="https://www.github.com/"><i className="bi bi-github"></i></a>
           <a href="https://www.instagram.com/"><i className="bi bi-instagram"></i></a>
-          <a href="tel:+1234567890"><i className="bi bi-phone"></i></a>
+          <a href="tel:+1234567890"><i className="bi bi-telephone"></i></a>
         </div>
       </div>
     </section>

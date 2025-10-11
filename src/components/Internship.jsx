@@ -5,32 +5,37 @@ import mit from '../assets/mit-logo.png';
 import progton from '../assets/progton-logo.png';
 
 const internships = [
-  
   {
     img: pentagon,
     title: "Pentagon Space",
-    desc: "Pentagon Space empowers professionals with upskilling and mastering in technologies at affordable prices. With innovative trainers and industry-relevant courses, it simplifies complex concepts and prepares learners for the future. Backed by strong placement support, Pentagon-space bridges the gap between knowledge and carrer growth.",
-    details: "Python Full-Stack Developer Intern"
+    desc: "Pentagon Space is a Bengaluru-based training institute offering immersive programs in Python, Java, MERN stack, and software testing. With a focus on real-time applied learning and 100% placement support, it equips students with industry-relevant skills through expert-led sessions and hands-on projects.",
+    details: `
+      <section>
+        <li>
+        </li>
+      </section>
+          `
   },
   {
     img: rooman,
     title: "Rooman Technologies",
-    desc: "Rooman Technologies specializes in IT infrastructure and networking internships.",
-    details: "Interns at Rooman Technologies gain experience in network setup, cybersecurity, and cloud computing. The program includes workshops, certifications, and practical assignments."
+    desc: "Rooman Technologies offers virtual, project-based internships aligned with emerging technologies. Their programs are designed to build real-world skills in IT infrastructure, AI&ML, supported by expert mentorship and recognized certifications.",
+    details: "Internship Role: AI Data Analyst & Network Intern. Interns work on live projects involving Python, SQL/NoSQL, Linux, Flask, Power BI, and machine learning. The program includes weekly assessments, career guidance, and placement assistance, with certification upon successful completion."
   },
   {
     img: mit,
     title: "MIT Academy",
-    desc: "MIT Academy offers internships in data science and artificial intelligence.",
-    details: "MIT Academy's internship covers machine learning, data analysis, and AI model deployment. Interns collaborate on research projects and receive guidance from industry experts."
+    desc: "MIT Academy offers diverse internship opportunities through its departments and centers, including robotics, automation, and AI. These programs combine lectures, lab sessions, and mini-projects to foster innovation and technical expertise.",
+    details: "Internship Role: AI & Robotics Intern. Interns participate in hands-on lab work, case studies, and guided projects focused on automation, machine learning, and data analysis. The program includes certification and is open to engineering students from affiliated universities."
   },
   {
     img: progton,
     title: "Progton Technologies",
-    desc: "Progton Technologies focuses on web development and UI/UX design internships.",
-    details: "At Progton Technologies, interns work on modern web applications, learn about responsive design, and contribute to UI/UX improvements. The program emphasizes creativity and teamwork."
+    desc: "Progton Technologies specializes in custom web and mobile development, cloud services, and AI-driven solutions. Their internship programs foster creativity and technical excellence in modern frameworks and scalable architectures.",
+    details: "Internship Role: Web Development & Cloud Intern. Interns contribute to enterprise-grade applications using React, Ruby on Rails, and AWS. The program emphasizes performance optimization, UI/UX design, and backend integration, preparing interns for full-stack roles in dynamic industries."
   }
 ];
+
 
 function Internship() {
   const [selectedIntern, setSelectedIntern] = useState(null);
@@ -38,7 +43,7 @@ function Internship() {
 
   useEffect(() => {
     if (selectedIntern && detailsRef.current) {
-      detailsRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      detailsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }, [selectedIntern]);
 
@@ -67,7 +72,7 @@ function Internship() {
             ref={detailsRef}
             className="intern-details-container"
             style={{
-              width: '100%',
+            width: '100%',
               minHeight: '100vh',
               background: '#f9f9f9',
               marginTop: '2rem',

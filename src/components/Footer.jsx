@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer>
       <center>
-        <p>&copy;2025, Design and Developed By <span>ABHI</span></p>
+        <p>&copy;{new Date().getFullYear()}, Design and Developed By <span>ABHI</span></p>
       </center>
     </footer>
   );

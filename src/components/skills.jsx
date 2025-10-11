@@ -1,40 +1,51 @@
 import React from 'react';
-import css3 from '../assets/css-3.png';
-import html5 from '../assets/html-5.png';
-import js from '../assets/java-script.png';
-import python from '../assets/python.png';
-import django from '../assets/django.png';
-import mysql from '../assets/mysql.png';
 
 const skillsData = [
   {
     category: "Backend Technologies",
     skills: [
-      { icon: python, name: "Python" }
+      { icon: "bi-terminal", name: "Python" }
     ]
   },
   {
     category: "Web Technologies",
     skills: [
-      { icon: html5, name: "HTML5" },
-      { icon: css3, name: "CSS3" },
-      { icon: js, name: "JavaScript" },
-      { icon: "devicon-react-original colored", name: "React" }
+      { icon: "bi-filetype-html", name: "HTML5" },
+      { icon: "bi-filetype-css", name: "CSS3" },
+      { icon: "bi-filetype-js", name: "JavaScript" },
+      { icon: "bi-code-slash", name: "React Js" }
     ]
   },
   {
     category: "Web Frameworks",
     skills: [
-        { icon: django, name: "Django" },
-        
+      { icon: "bi-box", name: "Django" },
+      { icon: "bi-box", name: "Flask" }
     ]
   },
   {
     category: "Databases",
     skills: [
-        { icon: mysql, name: "MySQL" }
+      { icon: "bi-database", name: "MySQL" },
+      { icon: "bi-database-fill", name: "SQL" }
     ]
-  }
+  },
+  {
+    category: "Core Competencies",
+    skills: [
+      { icon: "bi-cpu", name: "AIML" },
+      { icon: "bi-code-slash", name: "DSA [List, String, Sorting]" },
+      { icon: "bi-plug", name: "REST API" }
+    ]
+  },
+  {
+    category: "Development Tools",
+    skills: [
+      { icon: "bi-git", name: "Git" },
+      { icon: "bi-github", name: "GitHub" },
+      { icon: "bi-code", name: "VS Code" }
+    ]
+  },
 ];
 
 function Skills() {
@@ -51,8 +62,9 @@ function Skills() {
               <div className="skills-list">
                 {group.skills.map((skill, i) => (
                   <div className="skill" key={i}>
-                    <i className={skill.icon}></i>
-                    <p>{skill.name}</p>
+                    <i className={`bi ${skill.icon} skill-icon`}></i>
+                    <p data-tooltip={`Skill: ${skill.name}`}>{skill.name}</p>
+
                   </div>
                 ))}
               </div>
