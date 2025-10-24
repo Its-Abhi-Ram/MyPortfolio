@@ -7,35 +7,133 @@ import progton from '../assets/progton-logo.png';
 const internships = [
   {
     img: pentagon,
-    title: "Pentagon Space",
-    desc: "Pentagon Space is a Bengaluru-based training institute offering immersive programs in Python, Java, MERN stack, and software testing. With a focus on real-time applied learning and 100% placement support, it equips students with industry-relevant skills through expert-led sessions and hands-on projects.",
+    title: 'Pentagon Space',
+    desc: 'Immersive training in Python, Java, MERN stack, and software testing with placement support.',
     details: `
       <section>
-        <li>
-        </li>
+        <li><strong>Duration:</strong> (Feb 2025 - Present)</li>
+        <li><strong>Location:</strong> Vijayanagar, Bengaluru</li>
+        <li><strong>Focus:</strong> Real-time applied learning and hands-on projects</li>
       </section>
-          `
+      <section>
+        <h2>Tech Stack</h2>
+        
+          <li>Python and Programming in Python</li>
+          <li>Django</li>
+          <li>SQL</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+
+      </section>
+      <section>
+        <h2>Overview</h2>
+        <p>  <li>
+          Pentagon Space provided a structured internship program focused on full-stack development and testing. The curriculum emphasized practical exposure through mini-projects, coding challenges, and mock interviews.
+        </li>
+        
+        <li>And also which is focused on self development by making presentations and group discusions with mentors and group members.</li>
+
+        <li>
+          Here we can enhance skills through hands-on experience projects building and solving problems in presentation sessions. 
+        </li>
+        
+        
+        </p>
+    
+      </section>
+    `
   },
   {
     img: rooman,
-    title: "Rooman Technologies",
-    desc: "Rooman Technologies offers virtual, project-based internships aligned with emerging technologies. Their programs are designed to build real-world skills in IT infrastructure, AI&ML, supported by expert mentorship and recognized certifications.",
-    details: "Internship Role: AI Data Analyst & Network Intern. Interns work on live projects involving Python, SQL/NoSQL, Linux, Flask, Power BI, and machine learning. The program includes weekly assessments, career guidance, and placement assistance, with certification upon successful completion."
+    title: 'Rooman Technologies',
+    desc: 'Virtual internship in AI&ML, and IT infrastructure with project-based learning and certification.',
+    details: `
+      <section>
+        <li><strong>Duration:</strong> 5 months(400 hours)</li>
+        <li><strong>Role:</strong> AI&ML Intern</li>
+      </section>
+      <section>
+        <h2>Tech Stack</h2>
+        
+          <li>Python</li>
+          <li>SQL / NoSQL</li>
+          <li>Linux</li>
+          <li>Flask</li>
+          <li>AI&ML</li>
+        
+      </section>
+      <section>
+        <h2>Overview</h2>
+        <p>   <li>
+        Internship involved learning things by the corparate employees through Online live sessions, weekly assessments, and Project. The program concluded with a recognized certification.
+        </li>
+
+        <li>
+          This Internship WIINNR Program colabrated with VTU. and getting live sessions from the Rooman technologies, Wadhwani foundations, IIT Gauwati regarding soft skills and as well Technical skills like programming.
+        </li>
+
+        <li>
+          This internship gives an hands-on experience by solving problems and assessments in a LMS portals.
+        </li>
+        
+        
+        
+         </p>
+
+      
+      </section>
+    `
   },
   {
     img: mit,
-    title: "MIT Academy",
-    desc: "MIT Academy offers diverse internship opportunities through its departments and centers, including robotics, automation, and AI. These programs combine lectures, lab sessions, and mini-projects to foster innovation and technical expertise.",
-    details: "Internship Role: AI & Robotics Intern. Interns participate in hands-on lab work, case studies, and guided projects focused on automation, machine learning, and data analysis. The program includes certification and is open to engineering students from affiliated universities."
+    title: 'MIT Academy',
+    desc: 'Hands-on internship in robotics, automation, and AI through lab sessions and guided projects.',
+    details: `
+      <section>
+        <li><strong>Duration:</strong> 1 month (November 2023)</li>
+        <li><strong>Role:</strong> Full Stack web development</li>
+      </section>
+      <section>
+        <h2>Tech Stack</h2>
+        
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Xampp server</li>
+        
+      </section>
+      <section>
+        <h2>Overview</h2>
+        <p>Internship focused on basics of web development using html and css along with xampp server deploying projects. This internship helps to learn the web development skills and basic web page and forms creation.</p>
+      </section>
+    `
   },
   {
     img: progton,
-    title: "Progton Technologies",
-    desc: "Progton Technologies specializes in custom web and mobile development, cloud services, and AI-driven solutions. Their internship programs foster creativity and technical excellence in modern frameworks and scalable architectures.",
-    details: "Internship Role: Web Development & Cloud Intern. Interns contribute to enterprise-grade applications using React, Ruby on Rails, and AWS. The program emphasizes performance optimization, UI/UX design, and backend integration, preparing interns for full-stack roles in dynamic industries."
+    title: 'Progton Technologies',
+    desc: 'Web development and cloud internship with enterprise-grade project contributions and backend integration.',
+    details: `
+      <section>
+        <li><strong>Duration:</strong> 1 month (October - 2022)</li>
+        <li><strong>Role:</strong> Java Intern</li>
+      </section>
+      <section>
+        <h2>Tech Stack</h2>
+      
+          <li>Core Java</li>
+        
+      </section>
+      <section>
+        <h2>Overview</h2>
+        <p>Internship involved learning core java concepts and by using core java building the small mini projects such as pizza bill generator and mini online banking system, in this we can create account , deposit amount, withdraw amount, last transaction.</p>
+
+      </section>
+
+      
+    `
   }
 ];
-
 
 function Internship() {
   const [selectedIntern, setSelectedIntern] = useState(null);
@@ -57,22 +155,23 @@ function Internship() {
               <div className="intern-img">
                 <img src={intern.img} alt={intern.title} />
               </div>
-              <div className="intern-heading">{intern.title}</div>
+              <div className="intern-heading">
+                <h3>{intern.title}</h3>
+              </div>
               <div className="intern-info">{intern.desc}</div>
               <div className="buttons">
-                <button onClick={() => setSelectedIntern(intern)}>
-                  Read More
-                </button>
+                <button onClick={() => setSelectedIntern(intern)}>Read More</button>
               </div>
             </div>
           ))}
         </div>
+
         {selectedIntern && (
           <div
             ref={detailsRef}
             className="intern-details-container"
             style={{
-            width: '100%',
+              width: '100%',
               minHeight: '100vh',
               background: '#f9f9f9',
               marginTop: '2rem',
@@ -107,9 +206,14 @@ function Internship() {
               style={{ maxWidth: '200px', marginBottom: '1rem' }}
             />
             <h2>{selectedIntern.title}</h2>
-            <p style={{ maxWidth: '600px', textAlign: 'center' }}>
-              {selectedIntern.details}
-            </p>
+            <div
+              style={{
+                maxWidth: '700px',
+                textAlign: 'justify',
+                // lineHeight: '1.6'
+              }}
+              dangerouslySetInnerHTML={{ __html: selectedIntern.details }}
+            />
           </div>
         )}
       </div>

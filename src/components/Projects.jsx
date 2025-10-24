@@ -6,7 +6,7 @@ import bank from '../assets/bank-logo.png';
 const projectsData = [
   {
     img: iot,
-    title: "An IoT-based CRS Using ML",
+    title: "An IoT-based CRS Using Machine Learning",
     desc: "A smart complaint redressal system leveraging IoT and machine learning for efficient issue tracking.",
     details: `
       <section>
@@ -15,29 +15,26 @@ const projectsData = [
         <li><strong>Team : </strong>4 members </li>
       </section>
       <section>
-        <h4>Tech Stack</h4>
-        <ul>
+        <h2>Tech Stack</h2>
+        
           <li><strong>Backend:</strong> Python</li>
           <li><strong>Framework:</strong> Flask</li>
           <li><strong>Frontend:</strong> HTML, CSS</li>
-        </ul>
+        
         
       </section>
       <section>
-        <h4>Overview</h4>
+        <h2>Overview</h2>
         <p>This project integrates IoT sensors with a machine learning model to automate recommendation to formers about the suitable crop for yield in specific lands.</p>
       </section>
       <section>
-        <h4>Problem</h4>
+        <h2>Problem</h2>
         <p>One of the key problems that farmers in agriculture face, is how to decide the appropriate  
 crop to be cultivated in a particular season. This choice depends on various criteria like type  
 of soil, climatic conditions, and availability of resources and commercial demand. A false  
 selection can result in suboptimal yields, loss of revenue and damage to the environment. At  
 present, the majority of farmers are using local knowledges and assumptions that might not be  
-appropriate because 
-26
- 26
- it 
+appropriate because it 
 does 
 not 
 consider 
@@ -45,7 +42,7 @@ the frequent changes in agro-ecosystems due to climate
 change, soil degradation, and changing market environment. </p>
       </section>
       <section>
-        <h4>Solution</h4>
+        <h2>Solution</h2>
         <p>IoT-based crop recommendation system aims to provide farmers with  
 intelligent crop suggestions by leveraging real-time environmental and soil data. A network of  
 IoT sensors is deployed in the agricultural field to monitor real-time parameters, including soil  
@@ -53,20 +50,20 @@ humidity, temperature, pH and NPK levels in soil. A machine learning model is de
 recommend suitable crops to get more yield.</p>
       </section>
       <section>
-        <h4>Architecture / Workflow</h4>
-        <p> <ul> <li>  
+        <h2>Architecture / Workflow</h2>
+        <p>  <li>  
 At the core of the system is the Input Unit, which includes sensors for detecting soil pH, soil  
-nutrients (Nitrogen, Phosphorus, and Potassium), temperature, and humidity.</li> 
+nutrients (Nitrogen, Phosphorus, and Potassium), temperature, and humidity.</li> <br />
 <li> These parameters  
 are transmitted to the Control Unit, which comprises a GSM module and a microcontroller.  
-The control unit collects and processes the sensor data and communicates it over the internet.  </li>
+The control unit collects and processes the sensor data and communicates it over the internet.  </li> <br />
 <li>It also integrates real-time weather information such as temperature, precipitation, and wind  
-through a Weather Forecast API.</li>
+through a Weather Forecast API.</li> <br />
 <li> All collected and external data is transmitted to the Cloud  
-Unit, which includes a database and software that handle data storage and processing.</li> 
+Unit, which includes a database and software that handle data storage and processing.</li> <br />
 <li>The  
 cloud system performs crop prediction based on the analysed data and provides crop  
-recommendations using an expert system.</li>
+recommendations using an expert system.</li> <br />
 </p>
       </section>
 
@@ -83,18 +80,18 @@ recommendations using an expert system.</li>
       <li><strong>Team : </strong>4 members</li>
       </section>
       <section>
-        <h4>Tech Stack</h4>
-        <ul>
+        <h2>Tech Stack</h2>
+        
           <li><strong>Language:</strong> Python</li>
           <li><strong>Libraries:</strong> Scikit-learn, Pandas, NumPy</li>
-        </ul>
+        
       </section>
       <section>
-        <h4>Overview</h4>
+        <h2>Overview</h2>
         <p>This project uses supervised learning techniques to detect spam emails based on content features and metadata.</p>
       </section>
       <section>
-      <h4>Problem</h4>
+      <h2>Problem</h2>
       <p>Technological advances are accelerating the dissemination of information. 
 Today, millions of devices and their users are connected to the Internet, allowing 
 businesses to interact with consumers regardless of geography. People all over the 
@@ -103,7 +100,7 @@ way to communicate. It can be divided into two types of emails: spam and ham. Mo
 than half of the letters received by the user – spam.</p>
       </section>
       <section>
-      <h4>Solution</h4>
+      <h2>Solution</h2>
       <p>Naive Bayes is a probabilistic classifier that uses Bayes' Theorem to predict the 
 probability that an email belongs to a particular class (spam or non-spam).It assumes that the 
 presence of a particular feature in an email is independent of the presence of any other feature, 
@@ -124,19 +121,20 @@ calculates the probability of an email being spam based on the frequency of word
       <li><strong>Team : </strong>1 member</li>
       </section>
       <section>
-        <h4>Tech Stack</h4>
-        <ul>
+        <h2>Tech Stack</h2>
+        
           <li><strong>Language:</strong> Core Java</li>
-        </ul>
+        
       </section>
       <section>
-        <h4>Overview</h4>
+        <h2>Overview</h2>
         <p>This system supports account creation, fund transfers(credit, debit), along with balance enquery and transaction history robust error handling and validation.</p>
       </section>
       
     `
   }
 ];
+
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -211,7 +209,7 @@ function Projects() {
             />
             <h2>{selectedProject.title}</h2>
             <div
-              style={{ maxWidth: '700px', textAlign: 'left' }}
+              style={{ maxWidth: '700px', textAlign: 'justify' }}
               dangerouslySetInnerHTML={{ __html: selectedProject.details }}
             />
           </div>
