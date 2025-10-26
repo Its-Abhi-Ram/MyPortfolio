@@ -170,6 +170,8 @@ h4 {
   left: 300;
   border-radius: 2px;
 }
+
+
   
 .education{
       display: flex;
