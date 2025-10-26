@@ -39,7 +39,6 @@ const internships = [
           Here we can enhance skills through hands-on experience projects building and solving problems in presentation sessions. 
         </li>
         
-        
         </p>
     
       </section>
@@ -127,8 +126,9 @@ const internships = [
       <section>
         <h2>Overview</h2>
         <p>Internship involved learning core java concepts and by using core java building the small mini projects such as pizza bill generator and mini online banking system, in this we can create account , deposit amount, withdraw amount, last transaction.</p>
-
       </section>
+
+      
 
       
     `
@@ -217,6 +217,7 @@ function Internship() {
           </div>
         )}
       </div>
+      
     </section>
   );
 }

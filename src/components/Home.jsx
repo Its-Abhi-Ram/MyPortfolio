@@ -44,7 +44,7 @@ function Home() {
             </span>
           </h2> */}
           <p>
-            I'm a Computer Science and Engineering student with a passion for programming and technology. Currently, I'm enhancing my skills in Python full stack development at Pentagon Space. As an enthusiastic learner, I enjoy building small projects and am eager to contribute to innovative solutions in the tech industry.
+            I'm a recent graduate in Bachelor of Engineering of branch Computer Science and Engineering and also passionated in programming and technology. Currently, I'm enhancing my skills in Python full stack development at Pentagon Space. As an enthusiastic learner, I enjoy building small projects and I am eager to contribute to innovative solutions in the tech industry.
           </p>
         </div>
       </div>
