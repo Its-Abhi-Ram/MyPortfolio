@@ -19,7 +19,7 @@ const GetInTouch = () => {
           </div>
 
           <div className="social-icons">
-            <a href="https://www.linkedin.com/in/abhi-ram1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/abhi-ram12" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i className="bi bi-linkedin"></i>
             </a>
             <a href="https://github.com/Its-Abhi-Ram/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">

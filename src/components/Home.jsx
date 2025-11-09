@@ -55,7 +55,7 @@ function Home() {
           {/* <div className="btn"><a href="#">Follow +</a></div> */}
         </div>
         <div className="intro-social-icons">
-          <a href="https://www.linkedin.com/in/abhi-ram1"><i className="bi bi-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/abhi-ram12"><i className="bi bi-linkedin"></i></a>
           <a href="https://github.com/Its-Abhi-Ram/"><i className="bi bi-github"></i></a>
           {/* <a href="https://www.instagram.com/"><i className="bi bi-instagram"></i></a> */}
           <a href="tel:+917996325285"><i className="bi bi-telephone"></i></a>
