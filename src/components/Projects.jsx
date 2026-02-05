@@ -7,6 +7,7 @@ const projectsData = [
   {
     img: iot,
     title: "An IoT-based CRS Using Machine Learning",
+    link : `<p><a href="https://crs-3woq.onrender.com/">Project Demo link</a></p> `,
     desc: "A smart complaint redressal system leveraging IoT and machine learning for efficient issue tracking.",
     details: `
       <section>
@@ -208,6 +209,7 @@ function Projects() {
               style={{ maxWidth: '200px', marginBottom: '1rem' }}
             />
             <h2>{selectedProject.title}</h2>
+            <h3 style={{maxWidth : '700px', textAlign:'center'}} dangerouslySetInnerHTML={{__html:selectedProject.link}}></h3>
             <div
               style={{ maxWidth: '700px', textAlign: 'justify' }}
               dangerouslySetInnerHTML={{ __html: selectedProject.details }}

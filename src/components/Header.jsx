@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo.png';
 
 const Header = () => {
@@ -7,10 +7,57 @@ const Header = () => {
 
   const handleMenuToggle = () => setMenuOpen((prev) => !prev);
 
-  const handleLinkClick = (href) => {
+  const handleLinkClick = (e, href) => {
+    e.preventDefault();
     setActiveLink(href);
     setMenuOpen(false);
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
+
+  useEffect(() => {
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    if (!sections || sections.length === 0) return;
+
+    const headerEl = document.querySelector('header');
+    const headerHeight = headerEl ? headerEl.getBoundingClientRect().height : 0;
+
+    let ticking = false;
+
+    const updateActiveByScroll = () => {
+      const scrollPos = window.scrollY + headerHeight + 10; // small offset
+      // find the section whose top is the greatest value <= scrollPos
+      let current = sections[0];
+      for (const sec of sections) {
+        if (sec.offsetTop <= scrollPos) {
+          current = sec;
+        } else break;
+      }
+      setActiveLink(`#${current.id}`);
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateActiveByScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    // also handle resize (header size may change)
+    window.addEventListener('resize', updateActiveByScroll);
+
+    // run once to set initial active link
+    updateActiveByScroll();
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', updateActiveByScroll);
+    };
+  }, []);
 
   const navLinks = [
     { href: '#home', label: 'Home' },
@@ -43,7 +90,7 @@ const Header = () => {
               <a
                 href={href}
                 className={activeLink === href ? 'active' : ''}
-                onClick={() => handleLinkClick(href)}
+                onClick={(e) => handleLinkClick(e, href)}
               >
                 {label}
               </a>
@@ -96,14 +143,14 @@ const Header = () => {
             display: none;
             flex-direction: column;
             position: absolute;
-            top: 70px;
-            right: 20px;
+            top: 100%;
+            left: 0;
+            right: 0;
             background: white;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            padding: 1rem 2rem;
-            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            border-radius: 0 0 8px 8px;
             z-index: 100;
-            
           }
           
           .nav-links a {

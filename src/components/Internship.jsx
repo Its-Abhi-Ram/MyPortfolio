@@ -40,8 +40,9 @@ const internships = [
         </li>
         
         </p>
-    
       </section>
+
+   
     `
   },
   {
@@ -214,6 +215,7 @@ function Internship() {
               }}
               dangerouslySetInnerHTML={{ __html: selectedIntern.details }}
             />
+            
           </div>
         )}
       </div>

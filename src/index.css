@@ -356,6 +356,7 @@ section h1::after {
 
 /* About, Internship, Project Boxes */
 .about-box {
+  
   background: #f7f9fc;
   padding: 1.75rem;
   border-radius: 0.9rem;

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import './index.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -16,7 +16,7 @@ import Footer from './components/Footer';
 
 
 function App() {
-  const [count, setCount] = useState(0);
+
 
   
 
