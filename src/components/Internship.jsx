@@ -1,18 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
-import pentagon from '../assets/pentagon-logo.png';
+import dcl from '../assets/DCL.png';
 import rooman from '../assets/rooman-logo.jpeg';
 import mit from '../assets/mit-logo.png';
 import progton from '../assets/progton-logo.png';
 
 const internships = [
   {
-    img: pentagon,
-    title: 'Pentagon Space',
+    img: dcl,
+    title: 'Dhee Coding Lab',
     desc: 'Immersive training in Python, Java, MERN stack, and software testing with placement support.',
     details: `
       <section>
         <li><strong>Duration:</strong> (Feb 2025 - Present)</li>
-        <li><strong>Location:</strong> Vijayanagar, Bengaluru</li>
+        <li><strong>Location:</strong> Rajaji Nagar, Bengaluru</li>
         <li><strong>Focus:</strong> Real-time applied learning and hands-on projects</li>
       </section>
       <section>
@@ -30,7 +30,7 @@ const internships = [
       <section>
         <h2>Overview</h2>
         <p>  <li>
-          Pentagon Space provided a structured internship program focused on full-stack development and testing. The curriculum emphasized practical exposure through mini-projects, coding challenges, and mock interviews.
+          Dhee Coding Lab provided a structured internship program focused on full-stack development and testing. The curriculum emphasized practical exposure through mini-projects, coding challenges, and mock interviews.
         </li>
         
         <li>And also which is focused on self development by making presentations and group discusions with mentors and group members.</li>
