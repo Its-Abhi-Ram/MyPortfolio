@@ -50,7 +50,7 @@ function Home() {
       </div>
       <div className='icons-buttons'>
         <div className="buttons">
-          <div className="btn"><a href={Resume}>Download Resume</a></div>
+          <div className="btn"><a href={Resume} target='_blank'>Download Resume</a></div>
           {/* <div className="btn"><a href="#">Hire Me</a></div> */}
           {/* <div className="btn"><a href="#">Follow +</a></div> */}
         </div>
