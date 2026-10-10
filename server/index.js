@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import cors from 'cors';
 import express from 'express';
+import nodemailer from 'nodemailer';
 import rateLimit from 'express-rate-limit';
 
 const app = express();
@@ -58,50 +59,55 @@ app.post('/api/contact', rateLimit({
     return;
   }
 
-  const { BREVO_API_KEY, CONTACT_TO, MAIL_FROM } = process.env;
-  if (!BREVO_API_KEY || !CONTACT_TO || !MAIL_FROM) {
-    response.status(503).json({ error: 'Email delivery is not configured on the server.' });
-    return;
-  }
+  // Email delivery is temporarily disabled until SMTP credentials are configured.
+  // const smtpHost = process.env.SMTP_HOST;
+  // const smtpPort = Number(process.env.SMTP_PORT || 587);
+  // const smtpUser = process.env.SMTP_USER;
+  // const smtpPass = process.env.SMTP_PASS;
+  // const contactTo = process.env.CONTACT_TO;
+  // const mailFrom = process.env.MAIL_FROM || smtpUser;
 
-  const escapeHtml = (value) => value
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#039;');
-  const safeName = cleaned.name.replace(/[\r\n]+/g, ' ');
-  const safeMessage = escapeHtml(cleaned.message).replace(/\r?\n/g, '<br>');
+  // if (!smtpHost || !smtpUser || !smtpPass || !contactTo) {
+  //   response.status(503).json({ error: 'Email delivery is not configured on the server.' });
+  //   return;
+  // }
 
-  try {
-    const mailResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
-      method: 'POST',
-      headers: {
-        'api-key': BREVO_API_KEY,
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        sender: { name: 'Portfolio Contact', email: MAIL_FROM },
-        to: [{ email: CONTACT_TO }],
-        replyTo: { email: cleaned.email },
-        subject: `Portfolio message from ${safeName}`,
-        textContent: `Name: ${cleaned.name}\nPhone: ${cleaned.phone}\nEmail: ${cleaned.email}\n\nMessage:\n${cleaned.message}`,
-        htmlContent: `<h2>New message from your portfolio</h2><p><strong>Name:</strong> ${escapeHtml(cleaned.name)}</p><p><strong>Phone:</strong> ${escapeHtml(cleaned.phone)}</p><p><strong>Email:</strong> ${escapeHtml(cleaned.email)}</p><p><strong>Message:</strong><br>${safeMessage}</p>`
-      })
-    });
-    const mailResult = await mailResponse.json().catch(() => ({}));
-    if (!mailResponse.ok) {
-      console.error('Brevo delivery failed:', mailResult.message || mailResponse.status);
-      response.status(502).json({ error: 'Email delivery failed. Please try again later.' });
-      return;
-    }
+  // const escapeHtml = (value) => value
+  //   .replaceAll('&', '&amp;')
+  //   .replaceAll('<', '&lt;')
+  //   .replaceAll('>', '&gt;')
+  //   .replaceAll('"', '&quot;')
+  //   .replaceAll("'", '&#039;');
+  // const safeName = cleaned.name.replace(/[\r\n]+/g, ' ');
+  // const safeMessage = escapeHtml(cleaned.message).replace(/\r?\n/g, '<br>');
 
-    response.status(200).json({ ok: true, message: 'Message sent.' });
-  } catch (error) {
-    console.error('Contact email delivery failed:', error.message);
-    response.status(502).json({ error: 'Email delivery failed. Please try again later.' });
-  }
+  // try {
+  //   const transporter = nodemailer.createTransport({
+  //     host: smtpHost,
+  //     port: smtpPort,
+  //     secure: smtpPort === 465,
+  //     auth: {
+  //       user: smtpUser,
+  //       pass: smtpPass
+  //     }
+  //   });
+
+  //   await transporter.sendMail({
+  //     from: `"Portfolio Contact" <${mailFrom}>`,
+  //     to: contactTo,
+  //     replyTo: cleaned.email,
+  //     subject: `Portfolio message from ${safeName}`,
+  //     text: `Name: ${cleaned.name}\nPhone: ${cleaned.phone}\nEmail: ${cleaned.email}\n\nMessage:\n${cleaned.message}`,
+  //     html: `<h2>New message from your portfolio</h2><p><strong>Name:</strong> ${escapeHtml(cleaned.name)}</p><p><strong>Phone:</strong> ${escapeHtml(cleaned.phone)}</p><p><strong>Email:</strong> ${escapeHtml(cleaned.email)}</p><p><strong>Message:</strong><br>${safeMessage}</p>`
+  //   });
+
+  //   response.status(200).json({ ok: true, message: 'Message sent.' });
+  // } catch (error) {
+  //   console.error('Contact email delivery failed:', error.message);
+  //   response.status(502).json({ error: 'Email delivery failed. Please try again later.' });
+  // }
+
+  response.status(200).json({ ok: true, message: 'Message received. Email delivery is temporarily disabled.' });
 });
 
 app.use((error, _request, response, _next) => {
