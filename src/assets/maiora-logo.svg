@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 447 447" role="img" aria-labelledby="title">
+  <title id="title">Maiora logo</title>
+  <circle cx="223.5" cy="223.5" r="209.5" fill="#fff" stroke="#d7d7d7" stroke-width="1.5"/>
+  <path fill="#16b5df" d="M136 91c0-14 11-26 25-26 10 0 17 5 25 14l52 58c9 10 9 22 0 32l-52 58c-8 9-15 14-25 14-14 0-25-12-25-26V91z"/>
+  <path fill="#65dce7" d="M138 93v108c0 14 10 25 24 27 20-11 43-31 51-52 8-21-7-50-28-70-14-14-31-23-47-28z"/>
+  <path fill="#2639bd" d="M202 83c-1-6 2-11 8-14l9-4c13-5 27-1 36 9l47 54c12 14 12 33 0 47l-47 54c-9 10-23 14-36 9l-9-4c-6-3-9-8-8-14l41-46c9-10 9-22 0-32l-41-46c-4-4-1-9 0-13z"/>
+  <circle cx="294.5" cy="80.5" r="16" fill="#16b5df"/>
+  <text x="223.5" y="328" fill="#2639bd" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="77" font-weight="700" letter-spacing="-5" text-anchor="middle">maiora</text>
+</svg>

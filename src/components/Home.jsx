@@ -1,19 +1,7 @@
 import React from 'react';
 import profile from '../assets/Profile2.jpg';
 import { TypeAnimation } from 'react-type-animation';
-import { useState } from 'react';
 import Resume from '../assets/Resume.pdf'
-
-
-
-const roles = [
-  'Python Developer', 2000,
-  'Front-end Developer', 2000,
-  'Data Analyst', 2000,
-  'Full-stack Developer', 2000,
-  'SQL',2000,
-  'Gamer', 2000
-];
 
 function Home() {
   return (
@@ -25,26 +13,27 @@ function Home() {
         <div className="intro">
           <h3>Hi, I'm</h3>
           <h1><span className="name">ABHI</span></h1>
-          {/* <h2 id="fill">
+          <h2 id="fill">
             And I'm{' '}
             <span className="fill" style={{ color: 'red' }}>
               <TypeAnimation
                 sequence={[
-                  'Python Developer', 2000,
-                  'Front-end Developer', 2000,
+                  'Product Intern', 2000,
+                  'Full Stack Python Developer', 2000,
+                  // 'Python Developer', 2000,
+                  // 'Front-end Developer', 2000,
                   // 'Data Analyst', 2000,
-                  // 'SQL ',2000,
-                  'Full-stack Developer', 2000,
-                  'Gamer', 2000
+                  // 'SQL', 2000,
+                  // 'Gamer', 2000
                 ]}
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}
               />
             </span>
-          </h2> */}
+          </h2>
           <p>
-            I'm a recent graduate in Bachelor of Engineering of branch Computer Science and Engineering and also passionated in programming and technology. Currently, I'm enhancing my skills in Python full stack development at Dhee Coding Lab. As an enthusiastic learner, I enjoy building small projects and I am eager to contribute to innovative solutions in the tech industry.
+            I'm a Computer Science and Engineering graduate with a passion for programming and technology. Since May 2026, I've been working as a Product Intern at Maiora, a company that builds intelligent data-management software and platforms to turn complex data into actionable insights. I continue to develop my full-stack Python skills and enjoy building practical projects.
           </p>
         </div>
       </div>

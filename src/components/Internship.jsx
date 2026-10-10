@@ -3,8 +3,25 @@ import dcl from '../assets/DCL.png';
 import rooman from '../assets/rooman-logo.jpeg';
 import mit from '../assets/mit-logo.png';
 import progton from '../assets/progton-logo.png';
+import maiora from '../assets/maiora-logo.svg';
 
 const internships = [
+  {
+    img: maiora,
+    title: 'Maiora',
+    desc: 'Product Intern at an intelligent data-management software company.',
+    details: `
+      <section>
+        <li><strong>Duration:</strong> May 2026 - Present</li>
+        <li><strong>Role:</strong> Product Intern</li>
+      </section>
+      <section>
+        <h2>Company Overview</h2>
+        <p>Maiora builds intelligent data-management software and in-house platforms that help organizations turn complex data into actionable insights. Its work includes data analysis and integrations with platforms such as Snowflake and Databricks.</p>
+        <p>Since May 2026, I have been working as a Product Intern at Maiora.</p>
+      </section>
+    `
+  },
   {
     img: dcl,
     title: 'Dhee Coding Lab',
@@ -149,7 +166,7 @@ function Internship() {
   return (
     <section id="internship" className="internship-section">
       <div className="intern-container">
-        <h1>Internships</h1>
+        <h1>Work Experience &amp; Internships</h1>
         <div className="internship-box">
           {internships.map((intern, index) => (
             <div className="intern-com" key={index}>
