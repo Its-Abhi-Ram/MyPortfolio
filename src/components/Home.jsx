@@ -48,7 +48,6 @@ function Home() {
           <a href="https://github.com/Its-Abhi-Ram/"><i className="bi bi-github"></i></a>
           {/* <a href="https://www.instagram.com/"><i className="bi bi-instagram"></i></a> */}
           <a href="tel:+917996325285"><i className="bi bi-telephone"></i></a>
-          <a href="mailto:abhii.inteach@gmail.com"><i className='bi bi-envelope'></i></a>
         </div>
       </div>
     </section>

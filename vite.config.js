@@ -1,8 +1,20 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { fileURLToPath } from 'node:url'
+import { dirname } from 'node:path'
+
+const projectRoot = dirname(fileURLToPath(import.meta.url))
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/MyPortfolio/'
+  base: '/MyPortfolio/',
+  server: {
+    fs: {
+      allow: [projectRoot]
+    },
+    proxy: {
+      '/api': 'http://localhost:3001'
+    }
+  }
 })

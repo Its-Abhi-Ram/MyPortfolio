@@ -462,6 +462,117 @@ section h1::after {
   background: #f7f9fc;
   border-radius: 0.75rem;
   box-shadow: 0 2px 8px #5cc6ff11;
+  align-items: flex-start;
+  padding: 1.5rem;
+}
+
+.contact-container .get-in,
+.contact-form {
+  flex: 1 1 20rem;
+}
+
+.contact-form {
+  max-width: 38rem;
+  margin: 0;
+  background: #fff;
+  box-shadow: 0 4px 12px #5cc6ff11;
+}
+
+.contact-form h2 {
+  margin: 0 0 0.25rem;
+  color: #0f1c2e;
+}
+
+.contact-form label {
+  color: #0f1c2e;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.contact-status {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contact-status.success {
+  color: #176b3a;
+}
+
+.contact-status.error {
+  color: #a32626;
+}
+
+.email-sending-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: rgba(8, 23, 40, 0.94);
+  color: #fff;
+}
+
+.email-sending-overlay p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.email-sending-animation {
+  position: relative;
+  width: 8rem;
+  height: 7rem;
+  display: grid;
+  place-items: center;
+}
+
+.email-envelope {
+  font-size: 4.5rem;
+  color: #5cc6ff;
+  animation: email-envelope-pulse 1.5s ease-in-out infinite;
+}
+
+.email-send {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  font-size: 2rem;
+  color: #fff;
+  animation: email-send-flight 1.5s ease-in-out infinite;
+}
+
+@keyframes email-envelope-pulse {
+  50% { transform: translateY(0.3rem) scale(0.94); }
+}
+
+@keyframes email-send-flight {
+  0%, 100% { opacity: 0; transform: translate(-2.5rem, 2rem) scale(0.65); }
+  35%, 75% { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .email-envelope,
+  .email-send {
+    animation-duration: 3s;
+  }
 }
 
 .contact-box {
